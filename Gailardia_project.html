@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaillardia</title>
+    <style>
+      body {
+        background: linear-gradient(98.3deg, #fdd326 10.6%, #e1335e 97.7%);
+      }
+      h1 {
+        font-size: 38px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 15px;
+      }
+      .container {
+        background: white;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .botanical {
+        font-size: 18px;
+        margin: 5px;
+        line-height: 1.5;
+      }
+      .learn-more {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ba1732;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .plant {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 30px;
+        border: 1px;
+        border-radius: 15px;
+        background-color: #fdd326;
+        font-size: 20px;
+        color: #ba1732;
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 5px 5px #ba1732;
+      }
+      .plant:hover {
+        color: #fdd326;
+        background-color: #ba1732;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px #fdd326;
+      }
+      .collage {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 30px;
+        border: 1px;
+        border-radius: 15px;
+        background-color: #ba1732;
+        font-size: 20px;
+        color: #fdd326;
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 5px 5px #fdd326;
+      }
+      .collage:hover {
+        color: #ba1732;
+        background-color: #fdd326;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px #ba1732;
+      }
+      .author {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 500;
+      }
+      .author-link {
+        text-decoration: none;
+        color: #ba1732;
+      }
+      .author-link:hover {
+        text-decoration: underline;
+      }
+      .heart {
+        background: -webkit-linear-gradient(#fdd326 10.6%, #e1335e 97.7%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I <span class="heart">💛</span> Gaillardia!</h1>
+      <h2>Indian blanket flower</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/740/original/DSC_8971.JPG?1700686513"
+        alt="Gaillardia flower"
+        id="photo"
+      />
+      <br />
+      <p class="botanical">
+        Gaillardia is a genus of flowering plants in the family
+        <em>Asteraceae</em>🌻. Many cultivars have been bred for
+        <em>ornamental use</em>. The stem is usually branching and erect to a
+        maximum height around 80 cm. The leaves are alternately arranged.The
+        inflorescence is a solitary flower head. The head can have 15 or more
+        ray florets. They can be almost any shade of yellow, orange, red,
+        purplish, brown, white, or <em>bicolored</em>. They are
+        <em>sometimes rolled into a funnel shape</em>. The fruit usually has a
+        pappus of scales.
+      </p>
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Gaillardia"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on Wikipedia
+      </a>
+      <br />
+      <br />
+      <br />
+      <button class="plant"><strong>🌱Plant Gaillardia</strong></button>
+      <br />
+      <button class="collage"><strong>I want more Gaillardia!</strong></button>
+      <br />
+      <hr />
+      <div class="author">
+        made by
+        <a
+          href="https://www.flickr.com/photos/157176574@N06/"
+          class="author-link"
+          target="_blank"
+          >Tetiana Farafonova</a
+        >
+      </div>
+    </div>
+    <script>
+      function gardening() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("what is your e-mail adress?");
+        if (age < 12) {
+          alert(
+            "We will be in touch. Ask your parents to help you with gardening, " +
+              name +
+              "!"
+          );
+        } else {
+          alert("We will be in touch. Happy gardening, " + name + "!");
+        }
+      }
+      let plantButton = document.querySelector(".plant");
+      plantButton.addEventListener("click", gardening);
+      function changeImg() {
+        document.getElementById("photo").src =
+          "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/735/original/51693123158_5e228614ba_c.jpg?1700684370";
+      }
+      let moreButton = document.querySelector(".collage");
+      moreButton.addEventListener("click", changeImg);
+    </script>
+  </body>
+</html>
